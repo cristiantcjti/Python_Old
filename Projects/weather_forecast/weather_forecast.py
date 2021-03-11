@@ -26,8 +26,8 @@ def display_weather(weather):
         max = forecast['max_temp']
         humid = forecast['humidity']
         print(f'The forecast for {day} is minimum temperature of {min}°C\n'
-        f'maximum temperature of {max}°C with {humid} of humidity')
-        print("!")
+        f'maximum temperature of {max}°C with {humid} of humidity!')
+        print("--------------------------------------------------------------")
 
 def disambiguate_locations(locations):
     print("Ambiguous location! Did you mean:")
@@ -36,22 +36,37 @@ def disambiguate_locations(locations):
 
 def weather_dialog():
     try:
+        lret = True
         where = ''
         while not where:
-            where = input("Where in the world are you? ")
-            locations = fetch_location(where)
-            if len(locations) == 0:
-                print("I don't know where that is.")
-            elif len(locations) > 1:
-                disambiguate_locations(locations)
+            print("Would you like to know the forecast to a place? [Y]=Yes;[N]=No: ")
+            answer = input()
+            if (answer == 'Y' or answer == 'y'):           
+                where = input("Where in the world are you? ")
+                locations = fetch_location(where)
+                if len(locations) == 0:
+                    print("I don't know where that is.")
+                elif len(locations) > 1:
+                    disambiguate_locations(locations)
+                else:
+                    woeid = locations[0]['woeid']
+                    display_weather(fetch_weather(woeid))
+            elif (answer == 'N' or answer == 'n'):
+                print("Ok, bye bye!")
+                lret = False
+                break
             else:
-                woeid = locations[0]['woeid']
-                display_weather(fetch_weather(woeid))
+                print("Sorry I do not understand your answer.")
+        return lret     
     except requests.exceptions.ConnectionError:
         print("Couldn't connect to server! Is the network up?")
 
 
-
 if __name__ == '__main__':
-    while True:
-        weather_dialog()
+    condition = True
+    while condition:
+        if (weather_dialog()):
+            condition = True
+        else:
+            condition = False
+
