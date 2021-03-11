@@ -42,7 +42,7 @@ def weather_dialog():
             print("Would you like to know the forecast to a place? [Y]=Yes;[N]=No: ")
             answer = input()
             if (answer == 'Y' or answer == 'y'):           
-                where = input("Where in the world are you? ")
+                where = input("What is the place you would like to know the forecast? ")
                 locations = fetch_location(where)
                 if len(locations) == 0:
                     print("I don't know where that is.")
