@@ -9,7 +9,7 @@ def play_guess():
     total_attempts = 0
     points = 1000
 
-    print("Select the round level:",secret_number)
+    print("Select the round level:")
     print("(1 = Easy) (2 = Moderate) (3 = Hard)):")
     level =  int(input())
 
