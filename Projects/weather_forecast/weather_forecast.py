@@ -22,8 +22,8 @@ def display_weather(weather):
     f = weather['consolidated_weather']
     for forecast in f:
         day = forecast['applicable_date']
-        min = forecast['min_temp']
-        max = forecast['max_temp']
+        min = round(forecast['min_temp'])
+        max = round(forecast['max_temp'])
         humid = forecast['humidity']
         print(f'The forecast for {day} is minimum temperature of {min}°C\n'
         f'maximum temperature of {max}°C with {humid} of humidity!')

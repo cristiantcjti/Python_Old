@@ -56,7 +56,7 @@ def dark_route(wallet):
     else:
         print_pause("You keep walking by the dark route...")
         print_pause("Suddenly, as you are just passing by in front of the\n"
-                    "bank machine, you decide to withdraw a sum of money\n"
+                    "an ATM, you decide to withdraw a sum of money\n"
                     "because you haven't any money to pay the bus charge.")
         print_pause("But there are only low-value bills of 2 or 5.")
 
@@ -64,13 +64,13 @@ def dark_route(wallet):
                              " withdraw 2 or 5.)\n", "2", "5")
         wallet.append(amount)
 
-        print_pause("Soon after withdrawing the bill you see a suspected group"
-                    "is\n""approching to you.!!!")
+        print_pause("Soon after withdrawing the bill you see a suspected group\n"
+                    "is approching to you.!!!")
         print_pause("So you need to decide whether you should stay or run"
                     "away.")
 
-        decision = valid_input_group("(Please enter your decision, stay or"
-                                     "run?)\n", ["stay", "run"])
+        decision = valid_input_group("(Please enter your decision, stay or run?)\n"
+                                        ,["stay", "run"])
 
         if "stay" in decision:
             print_pause("Worst decision. The group hits and robs you. You"
@@ -78,9 +78,9 @@ def dark_route(wallet):
                         "SORRY!")
             play_again(wallet)
         elif "run" in decision:
-            print_pause("Best decision. You flee from the group and return"
-                        "to\n the previous spot ready to choose your route"
-                        "again.\n")
+            print_pause("Best decision. You flee from the group and return to\n"
+                        "the previous spot ready to choose your route\n"
+                        "again.")
             choose_way(wallet)
 
 
@@ -97,12 +97,12 @@ def illuminated_route(wallet):
                     "Eventually, you can go safe and sound to the hotel!!!")
         play_again(wallet)
     else:
-        print_pause("Oh no!!! You haven't any money in on wallet. Ok time to\n"
+        print_pause("Oh no!!! You haven't any money in the wallet. Ok time to\n"
                     "go back to the dark route to withdraw some money...\n")
         dark_route(wallet)
 
 
-def adventure_game():
+def play_adventure_game():
     wallet = []
     place = random.choice(["town", "city", "country", "countryside"])
     build = random.choice(["houses", "buildings", "factories"])
@@ -113,14 +113,20 @@ def adventure_game():
 
 def play_again(wallet):
     while True:
-        again = valid_input_group("Whould you like to play again? (yes/no)\n",
+        again = valid_input_group("Would you like to play again? (yes/no)\n",
                                   ["yes", "no"])
         if "yes" in again:
-            adventure_game()
+            play_adventure_game()
             break
         elif "no" in again:
             print_pause("Ok!!! Good Bye.")
             break
+        else:
+            print_pause("Well it seems you are inserting a different yes/no answer.\n"
+                        "Please try again!")
+            
 
 
-adventure_game()
+if(__name__ == "__main__"):
+    play_adventure_game()
+
