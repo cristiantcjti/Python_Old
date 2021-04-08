@@ -2,10 +2,15 @@ from argument_extractor import Argument_Extractor_Url
 
 # www.bytebank.com.br/cambio?`valor=1500&moedaOrigem=real&moedaDestino=dolar
 
-url = 'www.bytebank.com.br/cambio?currencyOrigin=real&currencyTarget=dolar'
+url = 'https://bytebank.com/cambio?currencyOrigin=real&currencyTarget=dolar&valor=1500'
 
-argument = Argument_Extractor_Url(url)
+argument1 = Argument_Extractor_Url(url)
+currency_origin, currency_target  = argument1.extractor_arguments()
+value = argument1.extract_value()
 
-currency_origin, currency_target  = argument.extractor()
 
-print(currency_origin, currency_target)
+argument2 = Argument_Extractor_Url(url)
+currency_origin, currency_target  = argument2.extractor_arguments()
+value = argument2.extract_value()
+
+print(argument1)
