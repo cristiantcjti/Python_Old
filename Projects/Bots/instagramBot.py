@@ -8,11 +8,6 @@ class InstagramBot:
         self.password = password
         self.driver = webdriver.Firefox(executable_path=r'C:\\geckodriver\\geckodriver.exe')
 
-
-# // a[@href='/accounts/emailsignup/']
-# //input[@name='username']
-# //input[@name='password']
-
     def login(self):
         driver = self.driver
         driver.get('https://www.instagram.com')
@@ -42,17 +37,17 @@ class InstagramBot:
         print(hashtag + ' pictures: ' + str(len(pic_hrefs)))
 
         for pic_href in pic_hrefs:
-            if 'whatsapp' in pic_href:
+            if 'https://www.instagram.com/p' not in pic_href:
                 continue
             driver.get(pic_href)
-            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            #driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             try:
-                driver.find_elements_by_class_name('//button[@class="wpO6b"]').click()
+                click_button = driver.find_elements_by_class_name("wpO6b  ")
+                click_button[1].click()
                 time.sleep(19)
             except Exception as e:
                 time.sleep(5)
-
-
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
 
 
