@@ -291,3 +291,12 @@ JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 571: Typ
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1618337654596	geckodriver	INFO	Listening on 127.0.0.1:55404
+1618337657657	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\crist\\AppData\\Local\\Temp\\rust_mozprofilee5LspN"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618337660165	Marionette	INFO	Listening on port 55412
+1618337660343	Marionette	WARN	TLS certificate errors will be ignored for this session
+1618337713648	Marionette	INFO	Stopped listening on port 55412
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

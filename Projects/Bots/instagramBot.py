@@ -40,7 +40,6 @@ class InstagramBot:
             if 'https://www.instagram.com/p' not in pic_href:
                 continue
             driver.get(pic_href)
-            #driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             try:
                 click_button = driver.find_elements_by_class_name("wpO6b  ")
                 click_button[1].click()
