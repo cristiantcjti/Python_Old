@@ -1,9 +1,9 @@
 #PORTIFOLIO
 
 This is my Python 🐍 portifolio.  
-🗂️To see my projects please go to the Projects folder. 
-📚 The Classes folder contains my personal studies related to Python.
-🔖The FreeCodeCamp folder contains some projects that I will build in order to get my freeCodeCamp Python Certificate.(Not started)
+🗂️To see my projects please go to the Projects folder.<br> 
+📚 The Classes folder contains my personal studies related to Python.<br>
+🔖The FreeCodeCamp folder contains some projects that I will build in order to get my freeCodeCamp Python Certificate.(Not started)<br>
 🚀The Vanilla-todo in the main page is a collaborative open-source project where we use HTML/CSS/JS and Django.  
 
 
