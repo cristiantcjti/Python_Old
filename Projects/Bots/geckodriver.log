@@ -267,3 +267,27 @@ JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 571: Typ
 JavaScript error: https://www.instagram.com/static/bundles/es6/Consumer.js/81afaf9edb2c.js, line 51: OZ_SOURCE_BUFFER: An attempt was made to use an object that is not, or is no longer, usable
 JavaScript error: https://www.instagram.com/static/bundles/es6/oz-player.main.js/5f0ac6fc8a3b.js, line 33: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
 1618314185753	Marionette	INFO	Stopped listening on port 51163
+1618326390172	geckodriver	INFO	Listening on 127.0.0.1:54267
+1618326393248	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\crist\\AppData\\Local\\Temp\\rust_mozprofilesv9fcL"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618326395902	Marionette	INFO	Listening on port 54275
+1618326395956	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 571: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 571: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 571: TypeError: this.contentWindow is null
+JavaScript error: https://www.instagram.com/static/bundles/es6/Consumer.js/81afaf9edb2c.js, line 51: OZ_SOURCE_BUFFER: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: https://www.instagram.com/static/bundles/es6/oz-player.main.js/5f0ac6fc8a3b.js, line 33: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: https://www.instagram.com/static/bundles/es6/Consumer.js/81afaf9edb2c.js, line 51: OZ_SOURCE_BUFFER: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: https://www.instagram.com/static/bundles/es6/oz-player.main.js/5f0ac6fc8a3b.js, line 33: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 571: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 571: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 571: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 571: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 571: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 571: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 571: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 571: TypeError: this.contentWindow is null
+1618326751974	Marionette	INFO	Stopped listening on port 54275
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
