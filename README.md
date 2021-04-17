@@ -11,7 +11,10 @@ This is my Python 🐍 portifolio.
 -It is a bot that opens the Instagram and clicks on the like button of the pictures in the page automatically.
 
 🎮 games
--There are three games where I practiced my logic skills
+-There are three games where I practiced my logic skills.
+
+🗄️ python_mysql
+-A simple but complet CRUD with MySql.
 
 🌤️ weather_forecast
 -It is an APIRest that returns the weather forecast to cities choosen by the user. 
