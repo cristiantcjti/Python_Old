@@ -8,14 +8,14 @@ This is my Python 🐍 portifolio.
 
 PROJECTS:
 
-🤖 instagramBot
+🤖 instagramBot<br>
 -It is a bot that opens the Instagram and clicks on the like button of the pictures in the page automatically.
 
-🎮 games
+🎮 games<br>
 -There are three games where I practiced my logic skills.
 
-🗄️ python_mysql
+🗄️ python_mysql<br>
 -A simple but complet CRUD with MySql.
 
-🌤️ weather_forecast
+🌤️ weather_forecast<br>
 -It is an APIRest that returns the weather forecast to cities choosen by the user. 
