@@ -11,10 +11,13 @@ def get_logs():
     sql = ("SELECT * FROM logs ORDER BY created DESC")
     cursor.execute(sql)
     result = cursor.fetchall()
-
-    for row in result:
-       # print(row[0])
-        print(row)
+    size = len(result)
+    
+    if size != 0:
+        for row in result:
+            print(row[0])
+    else:
+        print("There is no log records!")
 
 def get_log(id):
     sql = ("SELECT * FROM logs WHERE id = %s")
@@ -22,9 +25,8 @@ def get_log(id):
     result = cursor.fetchone() 
     ret = []
     for row in result:
-        ret.append(row)
-        #print(row)
-    return ret 
+        print(row)
+    return row 
 
 def update_log(id, text):
     sql = ("UPDATE logs SET text = %s WHERE id = %s")
@@ -41,13 +43,17 @@ def delete_log(id):
 
 
 
+# Add a log
+#add_log('It is one more log', 'Cristian')
 
-add_log('This is the forth log', 'Marcos')
+# Return all logs
+#get_logs()
 
-get_logs()
+# To add an id to return one log
+#get_log(8) 
 
-get_log(4)
+# Update a log
+#update_log(8, "Updated log")
 
-update_log(4, "Updated log")
-
-delete_log(4)
+#Delete one log
+#delete_log(8)
