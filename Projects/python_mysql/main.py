@@ -23,10 +23,13 @@ def get_log(id):
     sql = ("SELECT * FROM logs WHERE id = %s")
     cursor.execute(sql, (id,))
     result = cursor.fetchone() 
-    ret = []
-    for row in result:
-        print(row)
-    return row 
+    
+    if result != None:
+        for row in result:
+            print(row)
+        return row 
+    else:
+        print(f"There is no log {id} recorded!")
 
 def update_log(id, text):
     sql = ("UPDATE logs SET text = %s WHERE id = %s")
@@ -36,24 +39,28 @@ def update_log(id, text):
 
 
 def delete_log(id):
-    sql = ("DELETE FROM logs WHERE id = %s")
-    cursor.execute(sql, (id,))
-    db.commit()
-    print("Log deleted")  
+    if get_log(id) != None:
+        sql = ("DELETE FROM logs WHERE id = %s")
+        cursor.execute(sql, (id,))
+        db.commit()
+        print("Log deleted")  
 
 
+#venv deactivate
 
-# Add a log
+### Add a log ###
+#add_log('It is one more log', 'Jonathan')
+#add_log('It is one more log', 'Bruno')
 #add_log('It is one more log', 'Cristian')
 
-# Return all logs
+### Return all logs ###
 #get_logs()
 
-# To add an id to return one log
-#get_log(8) 
+### To add an id to return one log ###
+#get_log(11) 
 
-# Update a log
-#update_log(8, "Updated log")
+### Update a log ###
+#update_log(11, "Updated log")
 
-#Delete one log
-#delete_log(8)
+#### Delete one log ###
+#delete_log(11)

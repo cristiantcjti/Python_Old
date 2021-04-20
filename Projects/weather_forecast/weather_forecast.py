@@ -19,8 +19,8 @@ def fetch_weather(woeid):
 
 def display_weather(weather):
     print(f"Weather for {weather['title']}:")
-    f = weather['consolidated_weather']
-    for forecast in f:
+    consolidated_weather = weather['consolidated_weather']
+    for forecast in consolidated_weather:
         day = forecast['applicable_date']
         min = round(forecast['min_temp'])
         max = round(forecast['max_temp'])
