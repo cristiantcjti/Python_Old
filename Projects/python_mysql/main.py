@@ -57,10 +57,10 @@ def delete_log(id):
 #get_logs()
 
 ### To add an id to return one log ###
-#get_log(11) 
+#get_log(9) 
 
 ### Update a log ###
-#update_log(11, "Updated log")
+#update_log(9, "Updated log")
 
 #### Delete one log ###
-#delete_log(11)
+#delete_log(9)
