@@ -10,7 +10,7 @@
 <h2>PROJECTS:</h2>
 
 <ul>
-    <li>🤖 instagramBot<br>-It is a bot that opens the Instagram and clicks on the like button of the pictures in the page automatically.</li>
+    <li>🤖 instagramBot<br>-It is a bot that opens an Instagram webpage and clicks on the like button of the pictures in the page automatically.</li>
     <li>🎮 games<br>-There are three games where I practiced my logic skills.</li>
     <li>🗄️ python_mysql<br>-A simple but complet CRUD with MySql.</li>
     <li>🌤️ weather_forecast<br>-It is an APIRest that returns the weather forecast to cities choosen by the user.</li> 
