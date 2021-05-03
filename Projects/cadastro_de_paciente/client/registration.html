@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Contato</title>
+        <link rel="stylesheet" href="reset.css" >
+        <link rel="stylesheet" href="style.css" >
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="caixa">
+                <h1>
+                    <img src="images/barbershop.svg" alt="Logo da barbearia" class="logo">
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="registration.html">Registration</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <form>
+                <label for="handbook">Handbook</label>
+                <input type="text" id="handbook" class="input-standard" required>
+
+                <label for="name">Name</label>
+                <input type="text" id="surname" class="input-standard" required>
+
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" class="input-standard" required>
+
+                
+                <label for="birthday">Birthday</label>
+                <input type="text" id="birthday" class="input-standard" required placeholder="dd/mm/year">
+
+                <label for="gender">Gender</label>
+                <input type="text" id="gender" class="input-standard" required>
+
+                <label for="CPF">CPF</label>
+                <input type="text" id="CPF" class="input-standard" required placeholder="xxxxxxxxxxx">
+
+                <label for="RG">RG</label>
+                <input type="text" id="RG" class="input-standard" required placeholder="xxxxxxxxx">
+
+                <label for="UF-RG">UF-RG</label>
+                <input type="text" id="UF-RG" class="input-standard" required>
+
+
+                <label for="email">Email</label>
+                <input type="email" id="email" class="input-standard" required placeholder="email@domain.com">
+
+                <label for="talephone">Telephone</label>
+                <input type="tel" id="talephone" class="input-standard" required placeholder="(xx) xxxxx-xxxx">
+
+                <label for="message">Message</label>
+                <textarea cols="70" rows="10" id="message" class="input-standard" required></textarea>
+                
+                <fieldset>
+                    <legend>How do you prefer to be contacted?</legend>
+                    <label for="radio-email"><input name="contact" type="radio" value="email" id="radio-email"> Email</label>
+
+                    <label for="radio-telephone"><input name="contact"  type="radio" value="telephone" id="radio-telephone"> Telephone</label>
+                
+                    <label for="radio-whatsapp"><input name="contact"  type="radio" value="whatsapp" id="radio-whatsapp" checked> Whatsapp</label>
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>Which time would you like to set?</legend>
+                        <select>
+                            <option>Morning</option>
+                            <option>Afternoon</option>
+                            <option>Evening</option>
+                        </select>
+                </fieldset>
+
+                <label class="checkbox"><input type="checkbox" checked>Would you like to receive our newsletter?</label>
+              
+                <input type="submit" value="Submit" class="send"> 
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Opening Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <footer>
+            <img src="images/barbershop.svg" alt="Logo da barbearia" class="logofooter">
+            <p class="copyright">&copy; Copyright Barber Shop Lost - 2021</p>
+        </footer>
+    </body>
+</html>
