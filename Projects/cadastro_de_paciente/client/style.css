@@ -131,7 +131,7 @@ form label, form legend {
 }
 
 .send {
-    width: 40%;
+    width: 20%;
     padding: 15px 0;
     background: blue;
     color: white;
@@ -146,6 +146,26 @@ form label, form legend {
 .send:hover {
     background: rgb(90, 159, 238) ; 
     transform: scale(1.2);  
+}
+
+.edit{
+    width: 20%;
+    padding: 15px 0;
+    margin: 0 50px;
+    background: green;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.edit:hover {
+    background: rgb(42, 139, 91) ; 
+    transform: scale(1.1);  
 }
 
 table {
@@ -265,6 +285,18 @@ td, th {
 .video {
     width: 560px;
     margin: 2em auto;
+}
+
+.fieldset-insurance
+{
+  width:500px;
+  height:70px;
+}
+
+.fieldset-contacted
+{
+  width:500px;
+  height:130px;
 }
 
 @media screen and (max-width: 480px){
