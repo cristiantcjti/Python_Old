@@ -13,7 +13,7 @@
         <header>
             <div class="caixa">
                 <h1>
-                    <img src="images/barbershop.svg" alt="Logo da barbearia" class="logo">
+                    <img src="images/health.svg" alt="Logo da clinica" class="logo">
                 </h1>
                 <nav>
                     <ul>
@@ -26,7 +26,7 @@
         <main>
             <form>
                 <label for="handbook">Handbook</label>
-                <input type="text" id="handbook" class="input-standard" required>
+                <input type="text" id="handbook" class="input-standard" >
 
                 <label for="name">Name</label>
                 <input type="text" id="surname" class="input-standard" required>
@@ -42,7 +42,7 @@
                 <input type="text" id="gender" class="input-standard" required>
 
                 <label for="CPF">CPF</label>
-                <input type="text" id="CPF" class="input-standard" required placeholder="xxxxxxxxxxx">
+                <input type="text" id="CPF" class="input-standard"  placeholder="xxxxxxxxxxx">
 
                 <label for="RG">RG</label>
                 <input type="text" id="RG" class="input-standard" required placeholder="xxxxxxxxx">
@@ -50,38 +50,43 @@
                 <label for="UF-RG">UF-RG</label>
                 <input type="text" id="UF-RG" class="input-standard" required>
 
-
                 <label for="email">Email</label>
                 <input type="email" id="email" class="input-standard" required placeholder="email@domain.com">
 
                 <label for="talephone">Telephone</label>
-                <input type="tel" id="talephone" class="input-standard" required placeholder="(xx) xxxxx-xxxx">
+                <input type="tel" id="talephone" class="input-standard" required placeholder="(xx) xxxx-xxxx">
 
-                <label for="message">Message</label>
-                <textarea cols="70" rows="10" id="message" class="input-standard" required></textarea>
-                
-                <fieldset>
-                    <legend>How do you prefer to be contacted?</legend>
-                    <label for="radio-email"><input name="contact" type="radio" value="email" id="radio-email"> Email</label>
+                <label for="cellphone">Cellphone</label>
+                <input type="tel" id="cellphone" class="input-standard" required placeholder="(xx) xxxxx-xxxx">
 
-                    <label for="radio-telephone"><input name="contact"  type="radio" value="telephone" id="radio-telephone"> Telephone</label>
-                
-                    <label for="radio-whatsapp"><input name="contact"  type="radio" value="whatsapp" id="radio-whatsapp" checked> Whatsapp</label>
-                    
+                <label for="cardnumber">Card Number</label>
+                <input type="tel" id="cardnumber" class="input-standard" required>
+
+                <label for="cardvalidity">Card Validity</label>
+                <input type="tel" id="cardvalidity" class="input-standard" required>
+
+                <fieldset class="fieldset-insurance">
+                    <legend>Which is your medical insurance?</legend>
+                        <select>
+                            <option>Unimed</option>
+                            <option>Amil</option>
+                            <option>Bradesco</option>
+                            <option>Sulamerica</option>
+                        </select>
                 </fieldset>
 
-                <fieldset>
-                    <legend>Which time would you like to set?</legend>
-                        <select>
-                            <option>Morning</option>
-                            <option>Afternoon</option>
-                            <option>Evening</option>
-                        </select>
+                <fieldset class="fieldset-contacted">
+                    <legend>How do you prefer to be contacted?</legend>
+                    <label for="radio-email"><input name="contact" type="radio" value="email" id="radio-email"> Email</label>
+                    <label for="radio-telephone"><input name="contact"  type="radio" value="telephone" id="radio-telephone"> Telephone</label>
+                    <label for="radio-whatsapp"><input name="contact"  type="radio" value="whatsapp" id="radio-whatsapp" checked> Whatsapp</label>
                 </fieldset>
 
                 <label class="checkbox"><input type="checkbox" checked>Would you like to receive our newsletter?</label>
               
                 <input type="submit" value="Submit" class="send"> 
+
+                <input type="Edit" value="Edit" class="edit">
             </form>
 
             <table>
@@ -93,24 +98,24 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Monday</td>
+                        <td>Monday - Friday</td>
                         <td>8h ~ 20h</td>
                     </tr>
                     <tr>
-                        <td>Wednesday</td>
-                        <td>8h ~ 20h</td>
+                        <td>Weekends</td>
+                        <td>8h ~ 16h</td>
                     </tr>
                     <tr>
-                        <td>Friday</td>
-                        <td>8h ~ 20h</td>
+                        <td>Holidays</td>
+                        <td>8h ~ 14h</td>
                     </tr>
                 </tbody>
             </table>
         </main>
 
         <footer>
-            <img src="images/barbershop.svg" alt="Logo da barbearia" class="logofooter">
-            <p class="copyright">&copy; Copyright Barber Shop Lost - 2021</p>
+            <img src="images/health.svg" alt="Logo da barbearia" class="logofooter">
+            <p class="copyright">&copy; Copyright Be3 Helth Tech - 2021</p>
         </footer>
     </body>
 </html>
