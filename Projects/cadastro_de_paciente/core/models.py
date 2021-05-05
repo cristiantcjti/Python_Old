@@ -28,3 +28,14 @@ class Patient(models.Model):
     class Meta:
         verbose_name = "Register"
         verbose_name_plural = "Registers"
+
+class Insurance(models.Model):
+    id_insurance = models.AutoField(primary_key=True) 
+    name = models.CharField(max_length=70)
+
+    def __str__(self):
+        return str(self.id_insurance)
+    
+    class Meta:
+        verbose_name = "Medical_Insurance"
+        verbose_name_plural = "Medical_Insurance"
