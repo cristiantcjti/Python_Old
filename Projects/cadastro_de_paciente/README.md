@@ -17,14 +17,14 @@ Abrir SQL Server Management Studio.
 > Acessar instância como localhost.
 
 > Clicar com botão direito em cima da pasta 'Databases' e executar comando para criação de novo banco.
-
-Dados para criação do banco:<br>
-endereço: db_sql.be3.co<br>
-porta: 1515<br>
-usuário: teste.be3<br>
-senha: ProcSeletivo#2020<br>
-base de dados: DB<br>
-
+```
+    Dados para criação do banco:<br>
+    endereço: db_sql.be3.co<br>
+    porta: 1515<br>
+    usuário: teste.be3<br>
+    senha: ProcSeletivo#2020<br>
+    base de dados: DB<br>
+```
 > Na pasta 'Security' da raiz criar novo loggin
 
 > No banco criado, no caminho 'Security/Users' adicionar novo usuário. 
