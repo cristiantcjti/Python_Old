@@ -47,8 +47,11 @@ def register(request):
     if handbook_rg:
         return JsonResponse({"message": 'RG is already registered'}, status=200)
     
-    name = Insurance.objects.get(id_insurance=data['medical_insurance'])
-    print('tetes', name.name)
+    #name = Insurance.objects.get(id_insurance=data['medical_insurance'])
+    try:
+        name = Insurance.objects.get(id_insurance=data['medical_insurance']) 
+    except Insurance.DoesNotExist: 
+        return JsonResponse({'message': ' Medical insurance not found.'}, status=404) 
 
     handbook = Patient(name=data['name'], surname=data['surname'] , birthday=data['birthday'], gender=data['gender'], 
     cpf=data['cpf'], rg=data['rg'], ufrg=data['ufrg'], email=data['email'], cellphone=data['cellphone'], 
