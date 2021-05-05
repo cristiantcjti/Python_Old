@@ -4,7 +4,7 @@ from django.forms.models import model_to_dict
 from django.http import HttpResponse, JsonResponse 
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
-from .models import Patient
+from .models import Patient, Insurance
 import json
 import logging
 
@@ -38,8 +38,6 @@ def id_handbook(request, id_handbook):
 def register(request):
         
     data = json.loads(request.body)
-    cpf = data['cpf']
-    rg = data['rg']
 
     handbook_cpf = Patient.objects.filter(cpf=data['cpf']).values()
     if handbook_cpf:
@@ -48,10 +46,13 @@ def register(request):
     handbook_rg = Patient.objects.filter(rg=data['rg']).values()
     if handbook_rg:
         return JsonResponse({"message": 'RG is already registered'}, status=200)
+    
+    name = Insurance.objects.get(id_insurance=data['medical_insurance'])
+    print('tetes', name.name)
 
     handbook = Patient(name=data['name'], surname=data['surname'] , birthday=data['birthday'], gender=data['gender'], 
     cpf=data['cpf'], rg=data['rg'], ufrg=data['ufrg'], email=data['email'], cellphone=data['cellphone'], 
-    telephone=data['telephone'], medical_insurance=data['medical_insurance'], card_number=data['card_number'],
+    telephone=data['telephone'], medical_insurance=name.name, card_number=data['card_number'],
     card_validity=data['card_validity'], contact_way=data["contact_way"], newsletter=data["newsletter"])
 
     try: 
