@@ -18,9 +18,9 @@ Abrir SQL Server Management Studio.
 
 > Clicar com botão direito em cima da pasta 'Databases' e executar comando para criação de novo banco.
 
-> Na pasta 'Security' na raiz criar novo loggin
+> Na pasta 'Security' da raiz criar novo loggin
 
-> No banco criado, dentro da pasta 'Security/Users' adicionar usuário. 
+> No banco criado, no caminho 'Security/Users' adicionar novo usuário. 
 
 
 
