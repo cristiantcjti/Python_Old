@@ -19,6 +19,8 @@ class Patient(models.Model):
     medical_insurance = models.CharField(max_length=70)
     card_number = models.IntegerField()
     card_validity = models.CharField(max_length=5)
+    contact_way = models.CharField(null=True, max_length=9)
+    newsletter = models.BooleanField(null=True, blank=True)
     
     def __str__(self):
         return str(self.id_handbook)
