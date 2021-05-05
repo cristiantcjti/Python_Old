@@ -11,37 +11,56 @@ import logging
 # Create your views here.
 
 @csrf_exempt
-@require_http_methods(["GET"]) 
+@require_http_methods(["GET","PUT"]) 
 def id_handbook(request, id_handbook):
+    
     try:
-        patient_data = Patient.objects.filter(id_handbook=id_handbook).values()
-    except Patient.DoesNotExist():
+        patient_data = Patient.objects.get(id_handbook=id_handbook)
+    except Patient.DoesNotExist:
         return JsonResponse({'message': ' Patient handbook not found.'}, status=404) 
-    return JsonResponse(list(patient_data), safe=False)
+
+    if request.method == "GET":
+        return JsonResponse(model_to_dict(patient_data), safe=False)
+    else:  
+        data = json.loads(request.body)
+
+        try:
+            Patient.objects.filter(id_handbook=id_handbook).update(**data) 
+        except IntegrityError: 
+            return JsonResponse('ERRO - Id é invalido', status=404) 
+        
+        return JsonResponse({'message': ' Handbook successfully updated.'}, status=200)
+
 
 
 @csrf_exempt
 @require_http_methods(["POST"]) 
-def register(request, rg, cpf):
+def register(request):
         
-        data = json.loads(request.body)
+    data = json.loads(request.body)
+    cpf = data['cpf']
+    rg = data['rg']
 
-        handbook_cpf = Patient.objects.filter(cpf=cpf).values()
-        if handbook_cpf:
-            return JsonResponse({"message": 'CPF is already registered'}, status=200)
+    handbook_cpf = Patient.objects.filter(cpf=data['cpf']).values()
+    if handbook_cpf:
+        return JsonResponse({"message": 'CPF is already registered'}, status=200)
 
-        handbook_rg = Patient.objects.filter(rg=rg).values()
-        if handbook_rg:
-            return JsonResponse({"message": 'RG is already registered'}, status=200)
+    handbook_rg = Patient.objects.filter(rg=data['rg']).values()
+    if handbook_rg:
+        return JsonResponse({"message": 'RG is already registered'}, status=200)
 
-        handbook = Patient(name=data['name'], surname=data['surname'] , birthday=data['birthday'], gender=data['gender'], 
-        cpf=cpf, rg=rg, ufrg=data['ufrg'], email=data['email'], cellphone=data['cellphone'], 
-        telephone=data['telephone'], medical_insurance=data['medical_insurance'], card_number=data['card_number'], card_validity=data['card_validity'])
+    handbook = Patient(name=data['name'], surname=data['surname'] , birthday=data['birthday'], gender=data['gender'], 
+    cpf=data['cpf'], rg=data['rg'], ufrg=data['ufrg'], email=data['email'], cellphone=data['cellphone'], 
+    telephone=data['telephone'], medical_insurance=data['medical_insurance'], card_number=data['card_number'],
+    card_validity=data['card_validity'], contact_way=data["contact_way"], newsletter=data["newsletter"])
 
-        try: 
-            handbook.save()  
-        except Exception as error:
-            logging.error(error)
-            return JsonResponse({'message': 'Error when saving'}, status=500) 
-        
-        return JsonResponse({"message": 'Register created'}, status=201)
+    try: 
+        handbook.save()  
+    except Exception as error:
+        logging.error(error)
+        return JsonResponse({'message': 'Error when saving'}, status=500) 
+    
+    return JsonResponse({"message": 'Register created'}, status=201)
+
+
+
