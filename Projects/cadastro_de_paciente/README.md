@@ -79,6 +79,14 @@ E para acessar o admin, não pare o servidor, em outro terminal, ative a maquina
 Se tudo estiver okay, vai aparecer
 ```
     Superuser created successfully.
+
 ```
+
+<h2>Implementação</h2>
+
+Aplicação WEB com HTML/CSS no front-end e PYTHON/DJANGO no back-end.
+
+Com essa aplicação, é possível a realização de cadastro de pacientes,<br>
+como também a edição e visualização de um paciente cadastrado.
 
 
