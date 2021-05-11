@@ -1,5 +1,6 @@
 from validate_docbr import CPF, CNPJ
 
+#EXEMPLO DE FACTORY DESIGN PATTERN
 class Documento:
 
     @staticmethod
