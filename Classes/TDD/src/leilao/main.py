@@ -1,4 +1,4 @@
-from dominio import Usuario, Lance, Leilao, Avaliador
+from .dominio import Usuario, Lance, Leilao, Avaliador
 
 cris = Usuario('cris')
 paulo = Usuario('paulo')
