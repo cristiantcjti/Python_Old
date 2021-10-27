@@ -14,5 +14,6 @@
     <li>🗄️ cadastro_de_paciente<br>-It is a CRUD project connecting Django to SqlServer</li>
     <li>🎮 games<br>-There are three games where I practiced my logic skills.</li>
     <li>🗄️ python_mysql<br>-A simple but complet CRUD with MySql.</li>
+    <li>🐰 python_rabbitmq<br>-Creating and consuming messages using rabbitmq message broker</li>
     <li>🌤️ weather_forecast<br>-It is an APIRest that returns the weather forecast to cities choosen by the user.</li> 
 </ul>
