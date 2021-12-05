@@ -2,29 +2,36 @@
 
 # hello_world.delay()
 
-# docker run -d -p 5672:5672 rabbitmq
-# pip install gevent
-# celery -A tasks worker -l info -P gevent 
-# flower -A tasks
-# celery flower --port=5566
-# celery -A tasks flower  --address=127.0.0.6 --port=5566
 
+from celery import chain 
 from dataclasses import dataclass
-from tasks import ocr_documento
+from tasks import ocr_document, check_cpf
 
 @dataclass
-class Pessoa:
+class Person:
     nome: str
     telefone: str
     documento: str 
 
-def cadastro(person: Pessoa):
-    ocr_documento.delay(person.documento)
+def cadastro(person: Person):
+#    data = ocr_document.delay(
+#        person.documento
+#        )
 
+#    check_cpf.delay(data['cpf']) 
+
+    chain_go = chain(
+        ocr_document.s(person.documento),
+        check_cpf.s()
+    )
     
+    chain_go()
 
-person = Pessoa('Eduardo', '1111-2356', 'images\documento_certo.png') 
+    return 'Your registration is under analyse.'
 
-cadastro(person)
+person = Person('Eduardo', '1111-2356', 'images\documento_certo.png') 
+
+print(cadastro(person))
+
 
 
