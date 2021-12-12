@@ -21,6 +21,9 @@ def main():
     # Start the process of consuming the messages. It is a loop.
     channel.start_consuming()
 
+# When we have more than one consumer to the same queue,
+# the messages will be distributerd in a round-robin manner(to the next)
+
 if __name__ == "__main__":
     try:
         main()

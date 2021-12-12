@@ -11,6 +11,8 @@ channel = connection.channel()
 channel.exchange_declare(exchange='br_exchange', exchange_type='fanout')
 
 # Create the temporary queue, if it does not exist already and associate it with the channel CH exclusively
+# We do not name the queue as long as we will use the one the broker provides. It solves the problem of 
+# having a particular queue to a particular consumer(the link).
 result = channel.queue_declare(queue='', exclusive=True)
 
 # Bind the queue with the exchange
